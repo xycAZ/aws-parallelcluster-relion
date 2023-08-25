@@ -118,4 +118,4 @@ SharedStorage:
       DeploymentType: SCRATCH_2
       ImportPath: s3://relion-dataset/
       ExportPath: s3://relion-dataset/
-      AutoImportPolicy: NEW_CHANGED
+      AutoImportPolicy: NEW_CHANGED_DELETED
