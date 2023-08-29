@@ -1,6 +1,6 @@
 #!/bin/bash -xue
 sudo apt-get update
-sudo apt install cmake git build-essential mpi-default-bin mpi-default-dev libfftw3-dev libtiff-dev libpng-dev ghostscript libxft-dev
+sudo apt-get install cmake git build-essential mpi-default-bin mpi-default-dev libfftw3-dev libtiff-dev libpng-dev ghostscript libxft-dev -y
 sudo apt-get install libx11-dev libxft-dev -y
 
 BASE_DIR=/shared
