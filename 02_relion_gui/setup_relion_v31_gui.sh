@@ -15,7 +15,7 @@ git checkout ${RELION_TAG}
 
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
-cmake -DFORCE_OWN_FFTW=ON -DFORCE_OWN_FLTK=ON ..
+cmake -DFORCE_OWN_FFTW=ON -DFORCE_OWN_FLTK=ON -DCUDA_ARCH=75 -DCUDA=ON ..
 make -j 4
 
 echo "export PATH=${PATH}:${BASE_DIR}/${TARGET}/${BUILD_DIR}/bin" |tee -a ~/.bashrc
