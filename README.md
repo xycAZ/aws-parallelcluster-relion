@@ -46,8 +46,16 @@ pcluster list-clusters
 #### 2.1 Login ParallelCluster via NICE-DCV
 
 Run following command and open published URL to access NICE-DCV remote desktop environment.
+Note: Modify SECURITY_GROUP_ID with your security group ID
+Run https://ifconfig.me/ on your browswer and get the IP address
 
 ```
+BrowserIP = "XX.XXX.XX.XX/32"
+MY_IP=$(curl -s https://ifconfig.me/)
+SECURITY_GROUP_ID= "sg-XXXXXXXXXXXXXX" (get this from your head node on AWS EC2 dashboard)
+IP_CIDR="$MY_IP/32"
+aws ec2 authorize-security-group-ingress --group-id $SECURITY_GROUP_ID --protocol tcp --port 22 --cidr $IP_CIDR
+aws ec2 authorize-security-group-ingress --group-id $SECURITY_GROUP_ID --protocol tcp --port 8443 --cidr $BrowserIP
 pcluster dcv-connect --cluster-name ${PCLUSTER_CLUSTER_NAME} --key-path ~/.ssh/${SSH_KEY}
 ```
 
@@ -85,7 +93,10 @@ Compilation needs few minutes.
 - :warning: This step downloads large amount of data (7GB) from Osaka University. Please read guides for appropriate use.
   - http://www.protein.osaka-u.ac.jp/rcsfp/databases/members/kawabata/EMtutorial.html
 
-
+Install CTFFIND (https://grigoriefflab.umassmed.edu/ctf_estimation_ctffind_ctftilt)
+cd /shared
+wget "https://grigoriefflab.umassmed.edu/system/tdf?path=ctffind-4.1.14-linux64.tar.gz&file=1&type=node&id=26"
+tar xvf the folder
 ```
 cd /shared
 wget http://www.protein.osaka-u.ac.jp/rcsfp/databases/members/kawabata/EMtutorial/EMPIAR-10248/EMPIAR-10248_tutorial_precalculated_results.tar.gz
