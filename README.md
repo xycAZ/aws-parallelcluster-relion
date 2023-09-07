@@ -6,6 +6,7 @@ set up example for Relion on AWS ParallelCluster
   - AWS ParallelCluster 3.1.3
   - Relion 3.1.3
   - `us-east-1` region
+  - create a default VPC if you haven't already! Very important
 
 ## Architecture Overview
 
