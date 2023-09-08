@@ -2,7 +2,7 @@ Region: {REGION}
 Image:
   Os: ubuntu2004
 HeadNode:
-  InstanceType: c6i.2xlarge
+  InstanceType: g4dn.2xlarge
   Networking:
     SubnetId: {SUBNET_HEAD}
   Ssh:
@@ -110,7 +110,7 @@ Scheduling:
 # Storage
 #######################################################
 SharedStorage:
-  - Name: FsxLustre0
+  - Name: FsxLustre1
     StorageType: FsxLustre
     MountDir: /shared
     FsxLustreSettings:
