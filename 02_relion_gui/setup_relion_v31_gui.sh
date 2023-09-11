@@ -4,8 +4,8 @@ sudo apt-get install cmake git build-essential mpi-default-bin mpi-default-dev l
 sudo apt-get install libx11-dev libxft-dev -y
 
 BASE_DIR=/shared
-TARGET=relion-v31
-RELION_TAG=ver3.1
+TARGET=relion-v4
+RELION_TAG=master
 BUILD_DIR=relion-gui
 
 cd ${BASE_DIR}

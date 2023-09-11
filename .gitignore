@@ -1,2 +1,3 @@
 on-node-configured.sh
 generated-*
+*.ipynb
