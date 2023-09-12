@@ -42,6 +42,22 @@ Scheduling:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+  - Name: g4dn-8xlarge
+    ComputeResources:
+    - Name: g4dn-8xlarge
+      InstanceType: g4dn.8xlarge
+      MinCount: 0
+      MaxCount: 10
+    Networking:
+      SubnetIds:
+      - {SUBNET_COMPUTE}
+    CustomActions:
+      OnNodeConfigured:
+        Script: s3://{BUCKET_NAME}/on-node-configured.sh
+    Iam:
+      S3Access:
+        - BucketName: {BUCKET_NAME}
+          EnableWriteAccess: false  
   - Name: g4dn-12xlarge
     ComputeResources:
     - Name: g4dn-12xlarge
@@ -58,6 +74,54 @@ Scheduling:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+   - Name: g4dn-16xlarge
+    ComputeResources:
+    - Name: g4dn-16xlarge
+      InstanceType: g4dn.16xlarge
+      MinCount: 0
+      MaxCount: 10
+    Networking:
+      SubnetIds:
+      - {SUBNET_COMPUTE}
+    CustomActions:
+      OnNodeConfigured:
+        Script: s3://{BUCKET_NAME}/on-node-configured.sh
+    Iam:
+      S3Access:
+        - BucketName: {BUCKET_NAME}
+          EnableWriteAccess: false 
+   - Name: g4ad-16xlarge
+    ComputeResources:
+    - Name: g4ad-16xlarge
+      InstanceType: g4ad.16xlarge
+      MinCount: 0
+      MaxCount: 10
+    Networking:
+      SubnetIds:
+      - {SUBNET_COMPUTE}
+    CustomActions:
+      OnNodeConfigured:
+        Script: s3://{BUCKET_NAME}/on-node-configured.sh
+    Iam:
+      S3Access:
+        - BucketName: {BUCKET_NAME}
+          EnableWriteAccess: false 
+   - Name: g4ad-8xlarge
+    ComputeResources:
+    - Name: g4ad-8xlarge
+      InstanceType: g4ad.8xlarge
+      MinCount: 0
+      MaxCount: 10
+    Networking:
+      SubnetIds:
+      - {SUBNET_COMPUTE}
+    CustomActions:
+      OnNodeConfigured:
+        Script: s3://{BUCKET_NAME}/on-node-configured.sh
+    Iam:
+      S3Access:
+        - BucketName: {BUCKET_NAME}
+          EnableWriteAccess: false 
   - Name: g4dn-metal
     ComputeResources:
     - Name: g4dn-metal
