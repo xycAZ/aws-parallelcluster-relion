@@ -27,7 +27,7 @@ BUCKET_NAME=pcluster-$(date +%F)-$(uuidgen --random | cut -d'-' -f1)
 #BUCKET_NAME=pcluster-$(date +%F)
 ASSET_BUCKET=s3://ee-assets-prod-us-east-1/modules/6804aca45d0e479f9ed576a8c9999f4f/v1
 VPC_ID=$(aws ec2 describe-vpcs --filters Name=isDefault,Values=true --query "Vpcs[].VpcId" --region ${AWS_REGION} | jq -r '.[0]')
-SUBNET_ID=$(aws ec2 describe-subnets --region=${AWS_REGION} --filters "Name=vpc-id,Values=$VPC_ID" --query 'Subnets[*].SubnetId'   | jq -r --arg i $(($RANDOM % 2)) '.[$i|tonumber]')
+SUBNET_ID=$(aws ec2 describe-subnets --region=${AWS_REGION} --filters "Name=vpc-id,Values=$VPC_ID" --query 'Subnets[*].SubnetId'   | jq -r --arg i $(($RANDOM % 6)) '.[$i|tonumber]')
 AZ_ID=$(aws ec2 describe-subnets --subnet-ids ${SUBNET_ID} | jq -r '.Subnets[0].AvailabilityZone')
 INSTANCE_OFFERING=$(aws ec2 describe-instance-type-offerings --location-type availability-zone --filters "Name=location,Values=${AZ_ID}" "Name=instance-type,Values=${CHECK_INSTANCE_TYPE}" --region $AWS_REGION)
 
