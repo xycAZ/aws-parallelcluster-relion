@@ -17,8 +17,8 @@ HeadNode:
     OnNodeConfigured:
       Script: s3://{BUCKET_NAME}/on-node-configured.sh
       Args:
+        - /shared
         - relion-dataset
-        - mybucket
   Iam:
     S3Access:
       - BucketName: {BUCKET_NAME}
@@ -44,8 +44,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - relion-dataset
-          - mybucket    
+          - /shared
+          - relion-dataset    
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -65,8 +65,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
+          - /shared
           - relion-dataset
-          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -86,8 +86,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - relion-dataset
-          - mybucket  
+          - /shared
+          - relion-dataset  
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -107,8 +107,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - relion-dataset
-          - mybucket  
+          - /shared
+          - relion-dataset  
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -128,8 +128,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
+          - /shared
           - relion-dataset
-          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -149,8 +149,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
+          - /shared
           - relion-dataset
-          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -170,8 +170,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - relion-dataset
-          - mybucket    
+          - /shared
+          - relion-dataset    
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -191,8 +191,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
+          - /shared
           - relion-dataset
-          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
@@ -212,8 +212,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
+          - /shared
           - relion-dataset
-          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
