@@ -74,5 +74,5 @@ aws s3 cp ${PCLUSTER_POST_INSTALL} s3://${BUCKET_NAME}/scripts/
 # Create Cluster
 
 pip3 install aws-parallelcluster==${PCLUSTER_VERSION} --user --quiet
-#pcluster create-cluster --cluster-name ${PCLUSTER_CLUSTER_NAME} --cluster-configuration ${PCLUSTER_CONFIG_NAME}
-pcluster create-cluster --dryrun true --cluster-name ${PCLUSTER_CLUSTER_NAME} --cluster-configuration ${PCLUSTER_CONFIG_NAME}
+pcluster create-cluster --cluster-name ${PCLUSTER_CLUSTER_NAME} --cluster-configuration ${PCLUSTER_CONFIG_NAME}
+#pcluster create-cluster --dryrun true --cluster-name ${PCLUSTER_CLUSTER_NAME} --cluster-configuration ${PCLUSTER_CONFIG_NAME}
