@@ -16,10 +16,15 @@ HeadNode:
   CustomActions:
     OnNodeConfigured:
       Script: s3://{BUCKET_NAME}/on-node-configured.sh
+      Args:
+        - relion-dataset
+        - mybucket
   Iam:
     S3Access:
       - BucketName: {BUCKET_NAME}
         EnableWriteAccess: false
+      - BucketName: relion-dataset
+        EnableWriteAccess: true
 #######################################################
 # Queue
 #######################################################
@@ -38,10 +43,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket    
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+        - BucketName: relion-dataset
+          EnableWriteAccess: true          
   - Name: g4dn-8xlarge
     ComputeResources:
     - Name: g4dn-8xlarge
@@ -54,10 +64,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false  
+        - BucketName: relion-dataset
+          EnableWriteAccess: true        
   - Name: g4dn-12xlarge
     ComputeResources:
     - Name: g4dn-12xlarge
@@ -70,10 +85,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket  
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+        - BucketName: relion-dataset
+          EnableWriteAccess: true      
   - Name: g4dn-16xlarge
     ComputeResources:
     - Name: g4dn-16xlarge
@@ -86,10 +106,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket  
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
+        - BucketName: relion-dataset
+          EnableWriteAccess: true  
   - Name: g4ad-16xlarge
     ComputeResources:
     - Name: g4ad-16xlarge
@@ -102,10 +127,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
+        - BucketName: relion-dataset
+          EnableWriteAccess: true          
   - Name: g4ad-8xlarge
     ComputeResources:
     - Name: g4ad-8xlarge
@@ -118,10 +148,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
+        - BucketName: relion-dataset
+          EnableWriteAccess: true        
   - Name: g4dn-metal
     ComputeResources:
     - Name: g4dn-metal
@@ -134,10 +169,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket    
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+        - BucketName: relion-dataset
+          EnableWriteAccess: true   
   - Name: c6i-4xlarge
     ComputeResources:
     - Name: c6i-4xlarge
@@ -150,10 +190,15 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+        - BucketName: relion-dataset
+          EnableWriteAccess: true
   - Name: c6i-32xlarge
     ComputeResources:
     - Name: c6i-32xlarge
@@ -166,20 +211,25 @@ Scheduling:
     CustomActions:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
+        Args:
+          - relion-dataset
+          - mybucket
     Iam:
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
+        - BucketName: relion-dataset
+          EnableWriteAccess: true  
 #######################################################
 # Storage
 #######################################################
-SharedStorage:
-  - Name: FsxLustre1
-    StorageType: FsxLustre
-    MountDir: /shared
-    FsxLustreSettings:
-      StorageCapacity: 1200
-      DeploymentType: SCRATCH_2
-      ImportPath: s3://relion-dataset/
-      ExportPath: s3://relion-dataset/
-      AutoImportPolicy: NEW_CHANGED_DELETED
+# SharedStorage:
+#   - Name: FsxLustre1
+#     StorageType: FsxLustre
+#     MountDir: /shared
+#     FsxLustreSettings:
+#       StorageCapacity: 1200
+#       DeploymentType: SCRATCH_2
+#       ImportPath: s3://relion-dataset/
+#       ExportPath: s3://relion-dataset/
+#       AutoImportPolicy: NEW_CHANGED_DELETED
