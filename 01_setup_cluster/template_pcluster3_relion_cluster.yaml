@@ -20,6 +20,9 @@ HeadNode:
         - /shared
         - relion-dataset
   Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
     S3Access:
       - BucketName: {BUCKET_NAME}
         EnableWriteAccess: false
@@ -47,6 +50,9 @@ Scheduling:
           - /shared
           - relion-dataset    
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -68,6 +74,9 @@ Scheduling:
           - /shared
           - relion-dataset
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess      
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false  
@@ -89,6 +98,9 @@ Scheduling:
           - /shared
           - relion-dataset  
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -110,6 +122,9 @@ Scheduling:
           - /shared
           - relion-dataset  
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -131,6 +146,9 @@ Scheduling:
           - /shared
           - relion-dataset
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -152,6 +170,9 @@ Scheduling:
           - /shared
           - relion-dataset
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -173,6 +194,9 @@ Scheduling:
           - /shared
           - relion-dataset    
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -194,6 +218,9 @@ Scheduling:
           - /shared
           - relion-dataset
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -215,6 +242,9 @@ Scheduling:
           - /shared
           - relion-dataset
     Iam:
+      AdditionalIamPolicies:
+        - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
