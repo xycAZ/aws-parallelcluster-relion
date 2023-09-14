@@ -28,7 +28,8 @@ region=$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/documen
 network=$(aws ec2 --region ${region} describe-instance-types --instance-types ${instance_type} --query "InstanceTypes[].[NetworkInfo.NetworkPerformance]" --output text | grep -o '[0-9]\+')
 
 # Mount S3 Bucket
+sudo mkdir -p /test
 sudo mkdir -p /shared
 sudo chown -R ubuntu:ubuntu /shared
 sudo chmod 777 /shared
-mount-s3 --maximum-throughput-gbps ${network} relion-dataset /shared
+sudo mount-s3 --allow-delete --allow-other --maximum-throughput-gbps ${network} relion-dataset /shared
