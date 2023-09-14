@@ -17,8 +17,8 @@ HeadNode:
     OnNodeConfigured:
       Script: s3://{BUCKET_NAME}/on-node-configured.sh
       Args:
-        - /shared
-        - relion-dataset
+        - "/shared"
+        - "relion-dataset"
   Iam:
     AdditionalIamPolicies:
       - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -47,8 +47,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset    
+          - "/shared"
+          - "relion-dataset"    
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -71,8 +71,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset
+          - "/shared"
+          - "relion-dataset"
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -95,8 +95,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset  
+          - "/shared"
+          - "relion-dataset"  
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -119,8 +119,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset  
+          - "/shared"
+          - "relion-dataset"  
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -143,8 +143,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset
+          - "/shared"
+          - "relion-dataset"
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -167,8 +167,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset
+          - "/shared"
+          - "relion-dataset"
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -191,8 +191,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset    
+          - "/shared"
+          - "relion-dataset"    
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -215,8 +215,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset
+          - "/shared"
+          - "relion-dataset"
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
@@ -239,8 +239,8 @@ Scheduling:
       OnNodeConfigured:
         Script: s3://{BUCKET_NAME}/on-node-configured.sh
         Args:
-          - /shared
-          - relion-dataset
+          - "/shared"
+          - "relion-dataset"
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
