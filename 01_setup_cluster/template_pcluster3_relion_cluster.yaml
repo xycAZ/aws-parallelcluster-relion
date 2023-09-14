@@ -23,6 +23,7 @@ HeadNode:
     AdditionalIamPolicies:
       - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+      - Policy: arn:aws:iam::aws:policy/*  
     S3Access:
       - BucketName: {BUCKET_NAME}
         EnableWriteAccess: false
@@ -52,7 +53,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -76,7 +78,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess      
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*        
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false  
@@ -100,7 +103,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -124,7 +128,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -148,7 +153,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -172,7 +178,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false 
@@ -196,7 +203,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*  
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -220,7 +228,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
@@ -244,7 +253,8 @@ Scheduling:
     Iam:
       AdditionalIamPolicies:
         - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess  
+        - Policy: arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+        - Policy: arn:aws:iam::aws:policy/*    
       S3Access:
         - BucketName: {BUCKET_NAME}
           EnableWriteAccess: false
