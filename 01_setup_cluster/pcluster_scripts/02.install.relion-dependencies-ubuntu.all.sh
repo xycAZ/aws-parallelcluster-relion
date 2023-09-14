@@ -29,5 +29,6 @@ network=$(aws ec2 --region ${region} describe-instance-types --instance-types ${
 
 # Mount S3 Bucket
 sudo mkdir -p /shared
+chown $cfn_cluster_user:$cfn_cluster_user /shared
 sudo chmod 777 /shared
 mount-s3 --maximum-throughput-gbps ${network} relion-dataset /shared
