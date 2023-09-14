@@ -11,7 +11,7 @@ sudo apt-get install libx11-dev libxft-dev -y
 
 # Install S3 Mountpoint if it's not installed
 if [ ! -x "$(which mount-s3)" ]; then
-    sudo apt-get install -y curl libfuse-dev pkg-config fuse libclang-dev
+    sudo apt-get install -y curl libfuse-dev pkg-config fuse libclang-dev cargo
     #sudo yum install -y fuse fuse-devel cmake3 clang-devel
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source "$HOME/.cargo/env"
     source "$HOME/.cargo/env"
