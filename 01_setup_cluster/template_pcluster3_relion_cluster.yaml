@@ -263,13 +263,13 @@ Scheduling:
 #######################################################
 # Storage
 #######################################################
-# SharedStorage:
-#   - Name: FsxLustre1
-#     StorageType: FsxLustre
-#     MountDir: /shared
-#     FsxLustreSettings:
-#       StorageCapacity: 1200
-#       DeploymentType: SCRATCH_2
-#       ImportPath: s3://relion-dataset/
-#       ExportPath: s3://relion-dataset/
-#       AutoImportPolicy: NEW_CHANGED_DELETED
+SharedStorage:
+  - Name: FsxLustre1
+    StorageType: FsxLustre
+    MountDir: /shared
+    FsxLustreSettings:
+      StorageCapacity: 1200
+      DeploymentType: SCRATCH_2
+      ImportPath: s3://relion-dataset/
+      ExportPath: s3://relion-dataset/
+      AutoImportPolicy: NEW_CHANGED_DELETED
